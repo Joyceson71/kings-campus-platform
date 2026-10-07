@@ -1,0 +1,27 @@
+{
+  "sampleRate": 44100,
+  "bitDepth": 16,
+  "channels": 1,
+  "key": "D major",
+  "bpm": 72,
+  "fullMix": {
+    "file": "ambient_mix.wav",
+    "durationSeconds": 30,
+    "loopStartSample": 0,
+    "loopEndSample": 1323000,
+    "blowoutCueSecond": 18
+  },
+  "bedLoop": {
+    "file": "ambient_bed_loop.wav",
+    "durationSeconds": 8,
+    "loopStartSample": 0,
+    "loopEndSample": 352800,
+    "note": "No distinct climax; intended for quiet background looping."
+  },
+  "stems": [
+    "piano_stem.wav",
+    "pads_stem.wav",
+    "percussion_stem.wav",
+    "chime_stem.wav"
+  ]
+}

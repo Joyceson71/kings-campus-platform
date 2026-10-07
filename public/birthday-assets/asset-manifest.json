@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-06-27T14:16:11.045Z",
+  "status": "Browser-ready local asset pack plus production export targets",
+  "localFiles": [
+    {
+      "fileName": "cake_poster.png",
+      "type": "Image fallback",
+      "format": "PNG",
+      "details": "Generated poster, square composition",
+      "sizeBytes": 1598497
+    },
+    {
+      "fileName": "cake_poster.svg",
+      "type": "Image fallback",
+      "format": "SVG",
+      "details": "Lightweight vector fallback",
+      "sizeBytes": 2772
+    },
+    {
+      "fileName": "cake_anim.glb",
+      "type": "3D model",
+      "format": "glTF 2.0 binary",
+      "details": "1444 tris, 6s loop, 60fps, procedural materials",
+      "sizeBytes": 73132
+    },
+    {
+      "fileName": "cake_hero_loop.glb",
+      "type": "3D model",
+      "format": "glTF 2.0 binary",
+      "details": "1444 tris, 18s loop, 60fps, procedural materials",
+      "sizeBytes": 73404
+    },
+    {
+      "fileName": "cake_anim.fbx",
+      "type": "3D model handoff",
+      "format": "FBX ASCII proxy",
+      "details": "Scene hierarchy notes; replace with validated DCC export",
+      "sizeBytes": 965
+    },
+    {
+      "fileName": "cake_blowout.json",
+      "type": "Animation",
+      "format": "Lottie JSON",
+      "details": "800x800, 30fps, 6s, vector blow-out",
+      "sizeBytes": 39404
+    },
+    {
+      "fileName": "ambient_mix.wav",
+      "type": "Audio mix",
+      "format": "WAV",
+      "details": "30s, 44.1kHz, 16-bit mono, D major, 72 BPM",
+      "sizeBytes": 2646044
+    },
+    {
+      "fileName": "ambient_bed_loop.wav",
+      "type": "Audio loop",
+      "format": "WAV",
+      "details": "8s, 44.1kHz, 16-bit mono, quiet seamless bed",
+      "sizeBytes": 705644
+    },
+    {
+      "fileName": "piano_stem.wav",
+      "type": "Audio stem",
+      "format": "WAV",
+      "details": "30s piano stem, 44.1kHz/16-bit mono",
+      "sizeBytes": 2646044
+    },
+    {
+      "fileName": "pads_stem.wav",
+      "type": "Audio stem",
+      "format": "WAV",
+      "details": "30s pad stem, 44.1kHz/16-bit mono",
+      "sizeBytes": 2646044
+    },
+    {
+      "fileName": "percussion_stem.wav",
+      "type": "Audio stem",
+      "format": "WAV",
+      "details": "30s percussion stem, 44.1kHz/16-bit mono",
+      "sizeBytes": 2646044
+    },
+    {
+      "fileName": "chime_stem.wav",
+      "type": "Audio stem",
+      "format": "WAV",
+      "details": "30s chime stem, 44.1kHz/16-bit mono",
+      "sizeBytes": 2646044
+    },
+    {
+      "fileName": "ambient_loop_points.json",
+      "type": "Audio metadata",
+      "format": "JSON",
+      "details": "Loop samples, BPM, key, cue point",
+      "sizeBytes": 574
+    },
+    {
+      "fileName": "cake_scene_source.json",
+      "type": "Source metadata",
+      "format": "JSON",
+      "details": "Layering, animation, and production notes",
+      "sizeBytes": 1738
+    }
+  ],
+  "exportTargets": [
+    {
+      "fileName": "cake_anim.webm",
+      "type": "Video alpha",
+      "format": "WebM VP9",
+      "status": "Export target",
+      "details": "1080x1080, 60fps, 6s, alpha channel. Requires Blender/FFmpeg render pass."
+    },
+    {
+      "fileName": "ambient_mix.mp3",
+      "type": "Audio mix",
+      "format": "MP3",
+      "status": "Export target",
+      "details": "192 kbps from ambient_mix.wav. Requires FFmpeg or audio encoder."
+    },
+    {
+      "fileName": "ambient_mix.ogg",
+      "type": "Audio mix",
+      "format": "OGG Vorbis",
+      "status": "Export target",
+      "details": "160 kbps from ambient_mix.wav. Requires FFmpeg or audio encoder."
+    }
+  ],
+  "optimization": {
+    "totalPublicAssetSizeGoal": "3-5 MB for deployed page payload; WAV stems should stay out of initial page load.",
+    "lazyLoad": [
+      "cake_anim.glb",
+      "cake_hero_loop.glb",
+      "audio files"
+    ],
+    "draco": "Run gltf-transform draco after DCC export if final GLB size needs reduction.",
+    "textureAtlas": "Bake 1024x1024 AO/roughness/base-color atlas in Blender for final asset."
+  }
+}

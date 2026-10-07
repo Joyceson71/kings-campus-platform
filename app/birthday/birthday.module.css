@@ -1,0 +1,246 @@
+.page {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(8, 66, 108, 0.58), transparent 42rem),
+    linear-gradient(155deg, #000b18 0%, #001a33 42%, #031021 100%);
+  color: #f8fbff;
+}
+
+.particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255, 202, 115, 0.72) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(203, 183, 230, 0.46) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(159, 210, 222, 0.34) 0 1px, transparent 2px);
+  background-position: 0 0, 42px 28px, 18px 96px;
+  background-size: 132px 132px, 188px 188px, 244px 244px;
+  opacity: 0.48;
+  animation: birthdayParticleDrift 34s linear infinite;
+}
+
+.hero {
+  align-items: center;
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.72fr);
+  min-height: 88svh;
+  padding: clamp(2rem, 5vw, 5rem);
+  position: relative;
+}
+
+.visualWrap {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  min-height: clamp(24rem, 56vw, 48rem);
+  position: relative;
+}
+
+.poster,
+.model {
+  aspect-ratio: 1 / 1;
+  border: 0;
+  display: block;
+  filter: drop-shadow(0 34px 70px rgba(0, 0, 0, 0.42));
+  height: auto;
+  max-width: min(76vw, 44rem);
+  width: 100%;
+}
+
+.poster {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.model {
+  background: transparent;
+  inset: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.copyPanel {
+  align-self: center;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.055));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 28px 86px rgba(0, 0, 0, 0.34);
+  max-width: 28rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  position: relative;
+  backdrop-filter: blur(24px);
+}
+
+.kicker {
+  color: #f3c780;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+  text-transform: uppercase;
+}
+
+.copyPanel h1 {
+  color: #fff7e8;
+  font-size: clamp(2.45rem, 6vw, 4.9rem);
+  font-weight: 750;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.subtext {
+  color: rgba(236, 244, 255, 0.82);
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
+  line-height: 1.72;
+  margin: 1.1rem 0 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.55rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.95rem;
+  font-weight: 700;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.primaryButton {
+  background: #f2c978;
+  border: 1px solid rgba(255, 240, 194, 0.72);
+  color: #111827;
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f8fbff;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-1px);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid #f2c978;
+  outline-offset: 3px;
+}
+
+.lottieShell {
+  height: 5.5rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+}
+
+.lottie {
+  height: 12rem;
+  left: 50%;
+  opacity: 0.74;
+  position: absolute;
+  top: -3.35rem;
+  transform: translateX(-50%);
+  width: 12rem;
+}
+
+.noteBand {
+  padding: 0 clamp(1rem, 5vw, 5rem) 3rem;
+  position: relative;
+}
+
+.noteInner {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(239, 246, 255, 0.72);
+  display: flex;
+  gap: 0.75rem;
+  margin: 0 auto;
+  max-width: 66rem;
+  padding-top: 1.1rem;
+}
+
+.noteInner p {
+  margin: 0;
+}
+
+@keyframes birthdayParticleDrift {
+  from {
+    background-position: 0 0, 42px 28px, 18px 96px;
+  }
+
+  to {
+    background-position: 132px 264px, -146px 216px, 262px -148px;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .visualWrap {
+    min-height: 20rem;
+    order: 1;
+  }
+
+  .copyPanel {
+    margin: -2.25rem auto 0;
+    max-width: min(100%, 33rem);
+    order: 2;
+  }
+
+  .poster,
+  .model {
+    max-width: min(100%, 33rem);
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .noteInner {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particles {
+    animation: none;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    transition: none;
+  }
+
+  .primaryButton:hover,
+  .secondaryButton:hover {
+    transform: none;
+  }
+}

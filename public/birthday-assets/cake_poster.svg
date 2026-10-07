@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Birthday cake with lit candles">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="68%">
+      <stop offset="0%" stop-color="#07345f"/>
+      <stop offset="58%" stop-color="#001a33"/>
+      <stop offset="100%" stop-color="#000b18"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <g opacity=".9" filter="url(#glow)">
+    <circle cx="151" cy="237" r="4" fill="#ffc96a"/>
+    <circle cx="621" cy="198" r="3" fill="#ffc96a"/>
+    <circle cx="676" cy="513" r="4" fill="#ffc96a"/>
+    <circle cx="230" cy="565" r="3" fill="#ffc96a"/>
+    <circle cx="487" cy="292" r="5" fill="#ffc96a"/>
+  </g>
+  <ellipse cx="400" cy="610" rx="246" ry="54" fill="#000814" opacity=".42"/>
+  <ellipse cx="400" cy="509" rx="220" ry="102" fill="#d7b882"/>
+  <rect x="180" y="438" width="440" height="142" rx="72" fill="#e5c894"/>
+  <ellipse cx="400" cy="438" rx="220" ry="98" fill="#f5dcac"/>
+  <ellipse cx="400" cy="421" rx="182" ry="62" fill="#fff0c8" opacity=".55"/>
+  <g fill="#f4dfbd">
+    <circle cx="205" cy="530" r="18"/><circle cx="247" cy="557" r="16"/><circle cx="296" cy="573" r="17"/>
+    <circle cx="354" cy="580" r="16"/><circle cx="415" cy="579" r="18"/><circle cx="477" cy="570" r="16"/>
+    <circle cx="532" cy="550" r="18"/><circle cx="590" cy="520" r="17"/>
+    <circle cx="224" cy="416" r="14"/><circle cx="276" cy="391" r="13"/><circle cx="338" cy="379" r="14"/>
+    <circle cx="402" cy="377" r="15"/><circle cx="468" cy="389" r="13"/><circle cx="533" cy="415" r="14"/>
+  </g>
+  <g fill="#f1c56f">
+    <rect x="306" y="265" width="15" height="132" rx="8"/><rect x="392" y="247" width="15" height="150" rx="8"/>
+    <rect x="479" y="265" width="15" height="132" rx="8"/>
+  </g>
+  <g filter="url(#glow)">
+    <ellipse cx="313.5" cy="242" rx="15" ry="36" fill="#ffbd5a"/>
+    <ellipse cx="399.5" cy="224" rx="16" ry="39" fill="#ffbd5a"/>
+    <ellipse cx="486.5" cy="242" rx="15" ry="36" fill="#ffbd5a"/>
+    <ellipse cx="313.5" cy="251" rx="7" ry="19" fill="#fff4cf"/>
+    <ellipse cx="399.5" cy="235" rx="7" ry="20" fill="#fff4cf"/>
+    <ellipse cx="486.5" cy="251" rx="7" ry="19" fill="#fff4cf"/>
+  </g>
+  <g opacity=".72">
+    <ellipse cx="281" cy="421" rx="30" ry="14" fill="#e8a4ae" transform="rotate(-20 281 421)"/>
+    <ellipse cx="504" cy="423" rx="32" ry="13" fill="#c9b7e6" transform="rotate(18 504 423)"/>
+    <ellipse cx="454" cy="474" rx="25" ry="11" fill="#f2c7aa" transform="rotate(-34 454 474)"/>
+  </g>
+</svg>

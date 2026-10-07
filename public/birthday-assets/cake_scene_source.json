@@ -1,0 +1,65 @@
+{
+  "generator": "scripts/generate-birthday-assets.mjs",
+  "style": "Elegant, respectful private birthday website asset pack",
+  "palette": {
+    "navy": "#001A33",
+    "candleGlow": "#ffbe64",
+    "icing": "#f2d9b1",
+    "pastelPetals": [
+      "#e8a4ae",
+      "#c9b7e6",
+      "#f2c7aa"
+    ]
+  },
+  "animations": [
+    {
+      "file": "cake_anim.glb",
+      "durationSeconds": 6,
+      "fps": 60,
+      "action": "Slow camera push, candle flicker, blow-out, smoke rise, relight for seamless loop"
+    },
+    {
+      "file": "cake_hero_loop.glb",
+      "durationSeconds": 18,
+      "fps": 60,
+      "action": "Longer hero loop with repeated glow and blow-out timing"
+    }
+  ],
+  "meshLayers": [
+    "cake_base",
+    "icing_top",
+    "icing_trim",
+    "candles",
+    "flames",
+    "smoke",
+    "petals",
+    "particles",
+    "lights",
+    "camera"
+  ],
+  "productionNotes": [
+    "The GLB files are browser-ready glTF 2.0 procedural models with transform animation.",
+    "Draco compression and baked texture maps require a DCC/export toolchain such as Blender plus gltf-transform.",
+    "The FBX file is an ASCII handoff proxy generated without DCC validation; replace with a Blender FBX export for production."
+  ],
+  "shortGlbStats": {
+    "durationSeconds": 6,
+    "fps": 60,
+    "triangles": 1444,
+    "materials": 8,
+    "nodes": 108,
+    "textureResolution": "procedural colors; production target 1024x1024 baked atlas",
+    "draco": false,
+    "fileBytes": 73132
+  },
+  "heroGlbStats": {
+    "durationSeconds": 18,
+    "fps": 60,
+    "triangles": 1444,
+    "materials": 8,
+    "nodes": 108,
+    "textureResolution": "procedural colors; production target 1024x1024 baked atlas",
+    "draco": false,
+    "fileBytes": 73404
+  }
+}
